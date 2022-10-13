@@ -1,0 +1,36 @@
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display SemiBold'), 
+    local('PlayfairDisplay-SemiBold'), 
+    url('Playfairdisplaysemibold.woff2') 
+    format('woff2'), url('Playfairdisplaysemibold.woff') 
+    format('woff'), url('Playfairdisplaysemibold.ttf') 
+    format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Bold'), 
+    local('PlayfairDisplay-Bold'), 
+    url('Playfairdisplaybold.woff2') 
+    format('woff2'), url('Playfairdisplaybold.woff') 
+    format('woff'), url('Playfairdisplaybold.ttf') 
+    format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Medium'), 
+    local('PlayfairDisplay-Medium'), 
+    url('Playfairdisplaymedium.woff2') 
+    format('woff2'), url('Playfairdisplaymedium.woff') 
+    format('woff'), url('Playfairdisplaymedium.ttf') 
+    format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

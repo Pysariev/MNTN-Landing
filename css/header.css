@@ -1,0 +1,223 @@
+/* HEADER */
+
+.header__container {
+    max-width: 1790px;
+    margin: 0 auto;
+    padding: 64px 15px 0 15px;
+}
+
+.header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 193px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 1,187;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+}
+
+.nav ul {
+    display: flex;
+    font-weight: 700;
+    line-height: 122%;
+}
+
+.nav li + li {
+    margin-left: 40px;
+}
+
+.nav a, 
+.header__account a {
+    position: relative;
+    display: inline-block;
+    line-height: 2;
+    color: #FFFFFF;
+}
+
+.nav a::after, 
+.header__account a::after {
+    display: block;
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    transition: width .25s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav a:hover::after, 
+.header__account a:hover::after {
+    width: 100%;
+}
+
+.header__account {
+    position: relative;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 124%;
+    padding-left: 30px;
+}
+
+.header__account::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: url(../img/icons/account.svg);
+    padding-right: 10px;
+}
+
+.nav__button {
+    display: none;
+    position: relative;
+    z-index: 9;
+    height: 25px;
+    background: none;
+}
+
+.nav__button-icon {
+    display: block;
+    position: relative;
+    width: 42px;
+    height: 5px;
+    background-color: #FFFFFF;
+}
+
+.nav__button-icon::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 5px;
+    background-color: #FFFFFF;
+}
+
+.nav__button-icon::after {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 5px;
+    background-color: #FFFFFF;
+}
+
+/* nav__button--close   //--превращаем кнопку мобильного меню (бургер) в крестик--// */
+.nav__button--close .nav__button-icon {
+    background-color: transparent;
+}
+
+.nav__button--close .nav__button-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav__button--close .nav__button-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+/* включаем мобильное меню на точке перелома 800px (добавляем класс:.mobile__nav--active) */
+.mobile__nav {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    padding: 70px 80px 50px 30px;
+    background-color: rgba(11, 29, 38, 0.8);
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile__nav .header__account,
+.mobile__nav .nav {
+    display: block;
+}
+
+.mobile__nav .nav ul {
+    flex-direction: column;
+}
+
+.mobile__nav .nav ul li {
+    margin: 0 0 25px 0;
+}
+
+.header__content {
+    display: block;
+    max-width: 980px;
+    color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    transition: all .3s ease-in;
+    margin-bottom: 843px;
+}
+
+.header__content:hover {
+    transform: scale(1.01);
+}
+
+.header__content-category {
+    position: relative;
+    padding-left: 104px;
+    font-weight: 800;
+    line-height: 122%;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+}
+
+.header__content-category::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 72px;
+    height: 2px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FBD784;
+}
+
+.header__content-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 88px;
+    line-height: 136%;
+    text-transform: capitalize;
+    margin: 32px 0px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.header__content-scroll {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 122%;
+    padding-right: 32px;
+}
+
+.header__content-scroll::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/icons/arrow_down.svg);
+    width: 16px;
+    height: 24px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

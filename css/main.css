@@ -1,0 +1,109 @@
+.get-started__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 200px;
+}
+
+.get-started__row.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.get-started__content {
+    position: relative;
+    padding-left: 150px;
+    max-width: 782px;
+}
+
+.get-started__content::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    content: attr(data-number);
+    display: block;
+    width: 240px;
+    height: 240px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 240px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.1);  
+}
+
+    .get-started__content-title {
+    position: relative;
+    padding-left: 96px;
+    font-weight: 800;
+    line-height: 122%;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+    margin-bottom: 27px;
+}
+
+.get-started__content-title::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 72px;
+    height: 2px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FBD784;
+}
+
+.get-started__content-caption {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 120%;
+    margin-bottom: 27px;
+}
+
+.get-started__content p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 178%;
+    
+}
+
+.get-started__content-link {
+    position: relative;
+    display: inline-block;
+    padding-right: 40px;
+    margin-top: 27px;
+    line-height: 122%;
+    color: #FBD784;
+}
+
+.get-started__content-link::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/icons/arrow_right.svg);
+    width: 24px;
+    height: 16px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right .2s ease-in;
+}
+
+.get-started__content-link:hover::after {
+    right: -5%;
+}
+
+.get-started__img {
+    max-width: 100%;
+}
+
+.get-started__img img {
+    display: block;
+    max-width: 100%;
+    /* object-fit: cover; */
+}
+
+ 
